@@ -39,7 +39,7 @@ After training, the models with best top-3 accuracy performance will be saved to
 
 ## 3. Test
 
-### 1. Download the models
+### (1) Download the models
 
 Download the models we trained from Baidu Netdisk: https://pan.baidu.com/s/1vnUBGrOAaBoiZmCfLxLeSg. Extracting code: `8m5h`.
 
@@ -53,7 +53,7 @@ checkpoints/
     `-- model_best.pth.tar
 ```
 
-### 2. Test the models
+### (2) Test the models
 
 When testing, at first we resize the test image into a designated size, then we employ [10-crop](https://pytorch.org/docs/master/torchvision/transforms.html#torchvision.transforms.TenCrop) to get a robust test output.
 
@@ -79,7 +79,7 @@ checkpoints/
     `-- test_logits.csv
 ```
 
-### 3. Average the logits
+### (3) Average the logits
 
 ```text
 sh scripts/ensemble_logits.sh
